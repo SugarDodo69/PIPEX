@@ -1,6 +1,6 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-NAME = libpipex.a
+NAME = pipex.a
 OBJ_DIR = obj
 
 SRC_MAIN = ft_placeholder.c
