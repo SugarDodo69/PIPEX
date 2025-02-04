@@ -1,19 +1,24 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 12:16:54 by lemarino          #+#    #+#             */
-/*   Updated: 2024/12/09 12:16:55 by lemarino         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
-
-void	ft_putnbr_fd(int n, int fd)
+/*n: The integer to output.
+fd: The file descriptor on which to write.
+Outputs the integer ’n’ to the given file
+descriptor. */
+size_t	ft_putnbr_fd(int n, int fd)
 {
+	char	*s;
+	size_t	i;
+
+	i = 0;
+	if (fd)
+	{
+		s = ft_itoa(n);
+		i += ft_putstr_fd(s, fd);
+		free(s);
+	}
+	return (i);
+}
+/*
+############# In alternative:#############
 	char	digit;
 
 	if (n == -2147483648)
@@ -32,4 +37,4 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	digit = (n % 10) + '0';
 	write(fd, &digit, 1);
-}
+*/

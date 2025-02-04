@@ -6,12 +6,12 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 14:37:16 by lemarino          #+#    #+#             */
-/*   Updated: 2025/01/26 15:59:46 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/01/24 19:22:03 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+// Counts the number of nodes in a list.
 int	ft_lstsize(t_list *lst)
 {
 	size_t	count;
@@ -26,5 +26,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
-
-// Counts the number of nodes in a list.

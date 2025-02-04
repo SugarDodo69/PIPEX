@@ -1,21 +1,18 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 12:16:39 by lemarino          #+#    #+#             */
-/*   Updated: 2024/12/12 12:48:24 by lemarino         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
-int	ft_putchar_fd(char c, int fd)
+size_t	ft_putchar_fd(char c, int fd)
 {
 	if (fd)
 		return (write(fd, &c, 1));
 	else
 		return (0);
 }
+
+/* 
+0 <= fd <= 1024
+0	Represents standard input.
+1	Represents standard output.
+2	Represents standard error.
+3~9	Writes whitin a specific file.
+10 >>	writes whitin several files.
+*/

@@ -1,17 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 12:17:15 by lemarino          #+#    #+#             */
-/*   Updated: 2024/12/09 12:17:16 by lemarino         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
-
+//Returns a pointer to the first occurrence of the character c in the string s.
 char	*ft_strchr(const char *s, int c)
 {
 	int		i;

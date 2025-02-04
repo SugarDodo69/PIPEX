@@ -12,7 +12,7 @@ SRC = ft_atoi.c ft_strlen.c ft_bzero.c ft_strlcat.c ft_isalpha.c ft_isdigit.c\
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 		ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
 		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c\
-		ft_printf.c ft_print_p.c ft_print_hex.c ft_print_u.c
+		ft_printf.c ft_print_p.c ft_print_hex.c ft_print_u.c get_next_line.c
 
 OBJECTS = ${SRC:%.c=$(OBJ_DIR)/%.o}
 

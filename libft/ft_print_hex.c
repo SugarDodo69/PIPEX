@@ -6,11 +6,11 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 18:22:57 by lemarino          #+#    #+#             */
-/*   Updated: 2024/12/12 12:55:47 by lemarino         ###   ########.fr       */
+/*   Updated: 2024/12/12 13:05:08 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static int	nlen(unsigned int nbr)
 {
@@ -36,7 +36,7 @@ static void	ft_putnbr_hex(unsigned int nbr, const char format)
 	{
 		if (nbr <= 9)
 			ft_putchar_fd((nbr + '0'), 1);
-		else
+		else// 10<=nbr<=15, turns it in the ASCII number of the corresponding lowcase letter
 		{
 			if (format == 'x')
 				ft_putchar_fd((nbr - 10 + 'a'), 1);

@@ -6,12 +6,16 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 17:25:53 by lemarino          #+#    #+#             */
-/*   Updated: 2025/01/25 19:52:00 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/01/26 16:15:00 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* Deletes and frees the given node and every
+successor of that node, using the function ’del’
+and free(3).
+Finally, the pointer to the list must be set to
+NULL. */
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
@@ -31,9 +35,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	}
 	*lst = NULL;
 }
-
-/* Deletes and frees the given node and every
-successor of that node, using the function ’del’
-and free(3).
-Finally, the pointer to the list must be set to
-NULL. */

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 12:17:56 by lemarino          #+#    #+#             */
-/*   Updated: 2025/01/26 16:00:53 by lemarino         ###   ########.fr       */
+/*   Created: 2024/11/25 10:59:03 by lemarino          #+#    #+#             */
+/*   Updated: 2025/01/30 18:25:59 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@
 # include <string.h>
 # include <ctype.h>
 # include <stddef.h>
+# include <fcntl.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
 
 typedef struct s_list
 {
@@ -46,7 +51,7 @@ void			ft_bzero(void *s, size_t n);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
-unsigned int	ft_strlcpy(char *dest, const char *src, size_t size);
+size_t			ft_strlcpy(char *dest, const char *src, size_t size);
 void			*ft_calloc(size_t nmemb, size_t size);
 char			*ft_strdup(const char *s);
 char			*ft_substr(const char *s, unsigned int start, size_t len);
@@ -56,10 +61,10 @@ char			*ft_itoa(int n);
 char			**ft_split(char const *s, char c);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
-int				ft_putchar_fd(char c, int fd);
-int				ft_putstr_fd(char *s, int fd);
-void			ft_putendl_fd(char *s, int fd);
-void			ft_putnbr_fd(int n, int fd);
+size_t			ft_putchar_fd(char c, int fd);
+size_t			ft_putstr_fd(char *s, int fd);
+size_t			ft_putendl_fd(char *s, int fd);
+size_t			ft_putnbr_fd(int n, int fd);
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 int				ft_lstsize(t_list *lst);
@@ -72,7 +77,8 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 int				ft_printf(const char *input, ...);
 int				ft_print_p(intptr_t *p);
-int				ft_print_n(int n);
 int				ft_print_hex(unsigned int nbr, const char input);
 int				ft_print_u(unsigned int n);
+char			*get_next_line(int fd);
+
 #endif

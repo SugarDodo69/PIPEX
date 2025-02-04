@@ -6,12 +6,12 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 21:57:05 by lemarino          #+#    #+#             */
-/*   Updated: 2025/01/26 15:59:21 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/01/26 15:58:40 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+// Adds the node 'new' at the end of the list.
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp;
@@ -29,5 +29,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	temp -> next = new;
 	return ;
 }
-
-// Adds the node 'new' at the end of the list.

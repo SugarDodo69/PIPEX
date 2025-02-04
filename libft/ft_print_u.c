@@ -6,11 +6,11 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 20:02:46 by lemarino          #+#    #+#             */
-/*   Updated: 2024/12/11 11:17:20 by lemarino         ###   ########.fr       */
+/*   Updated: 2024/12/12 15:36:07 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static unsigned int	countd(unsigned int n)
 {
@@ -51,11 +51,3 @@ int	ft_print_u(unsigned int n)
 	free(s);
 	return (l);
 }
-
-/* int main()
-{
-	unsigned int n = 4294967295;
-	ft_print_u(n);
-	write(1, ".\n", 2);
-	printf("%u.\n", n);
-} */

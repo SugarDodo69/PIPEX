@@ -6,11 +6,11 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 17:25:36 by lemarino          #+#    #+#             */
-/*   Updated: 2024/12/12 12:54:53 by lemarino         ###   ########.fr       */
+/*   Updated: 2024/12/12 15:35:53 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static int	ft_putnbr_p(unsigned long nbr)
 {
@@ -26,7 +26,7 @@ static int	ft_putnbr_p(unsigned long nbr)
 	{
 		if (nbr <= 9)
 			l += ft_putchar_fd((nbr + '0'), 1);
-		else
+		else// 10<=nbr<=15, turns it in the ASCII number of the corresponding lowcase letter
 			l += ft_putchar_fd((nbr - 10 + 'a'), 1);
 	}
 	return (l);
@@ -38,12 +38,8 @@ int	ft_print_p(intptr_t *p)
 
 	l = 0;
 	if (!p)
-	{
-		write(1, "(nil)", 5);
-		return (5);
-	}
-	write(1, "0x", 2);
-	l += 2;
+		return (write(1, "(nil)", 5));
+	l += write(1, "0x", 2);
 	l += ft_putnbr_p((unsigned long)p);
 	return (l);
 }

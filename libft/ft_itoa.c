@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 12:16:18 by lemarino          #+#    #+#             */
-/*   Updated: 2024/12/09 12:16:18 by lemarino         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
 static char	*ft_placenbr(char *s, size_t c, int n)
@@ -35,6 +23,8 @@ static char	*ft_placenbr(char *s, size_t c, int n)
 	return (s);
 }
 
+//Allocates (with malloc) and returns a string
+//	representing the integer received as an argument, or NULL if the allocation fails.
 char	*ft_itoa(int n)
 {
 	char		*str;

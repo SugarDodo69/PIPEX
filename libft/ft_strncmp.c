@@ -1,17 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 12:17:36 by lemarino          #+#    #+#             */
-/*   Updated: 2024/12/09 12:17:37 by lemarino         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
-
+//Compares the first (at most) n bytes of the two strings s1 and s2. It returns an integer less than, equal to, or greater than zero if  s1  is
+//     found, respectively, to be less than, to match, or be greater than s2.
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

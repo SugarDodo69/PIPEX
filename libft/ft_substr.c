@@ -1,17 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 12:17:45 by lemarino          #+#    #+#             */
-/*   Updated: 2024/12/09 12:17:46 by lemarino         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
-
+//Allocates (with malloc()) and returns a substring from the string ’s’.
+//	The substring begins at index ’start’ and is of maximum size ’len’.
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	size_t	i;

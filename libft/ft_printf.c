@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 16:17:12 by lemarino          #+#    #+#             */
-/*   Updated: 2024/12/12 12:58:37 by lemarino         ###   ########.fr       */
+/*   Updated: 2024/12/13 12:02:43 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_convert(va_list arg, const char format)
 {
@@ -22,7 +22,7 @@ int	ft_convert(va_list arg, const char format)
 	else if (format == 's')
 		return (ft_putstr_fd((va_arg(arg, char *)), 1));
 	else if (format == 'd' || format == 'i')
-		printed += ft_print_n(va_arg(arg, int));
+		printed += ft_putnbr_fd(va_arg(arg, int), 1);
 	else if (format == 'p')
 		printed += ft_print_p(va_arg(arg, intptr_t *));
 	else if (format == 'x' || format == 'X')
@@ -42,7 +42,7 @@ int	ft_printf(const char *input, ...)
 
 	i = 0;
 	printed = 0;
-	va_start(arg, input);
+	va_start(arg, input);	
 	if (!input)
 		return (-1);
 	while (input[i])
