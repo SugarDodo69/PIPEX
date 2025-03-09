@@ -1,6 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/04 15:37:28 by lemarino          #+#    #+#             */
+/*   Updated: 2025/02/12 18:39:15 by lemarino         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-// the function f to each character of the string s, passing its index as the first argument and the character itself as the second.
-//	A new string is created (using malloc()) to collect the results from the successive applications of f.
+// The function f to each character of the string s, passing
+//  its index as the first argument and the character itself as the second.
+//A new string is created (using malloc()) to collect the results 
+//  from the successive applications of f.
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 16:17:12 by lemarino          #+#    #+#             */
-/*   Updated: 2024/12/13 12:02:43 by marvin           ###   ########.fr       */
+/*   Updated: 2025/03/06 12:46:53 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_printf(const char *input, ...)
 
 	i = 0;
 	printed = 0;
-	va_start(arg, input);	
+	va_start(arg, input);
 	if (!input)
 		return (-1);
 	while (input[i])

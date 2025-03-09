@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:59:03 by lemarino          #+#    #+#             */
-/*   Updated: 2025/01/30 18:25:59 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/03/07 14:56:32 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 # include <ctype.h>
 # include <stddef.h>
 # include <fcntl.h>
+# include <stdint.h>
+# include <stdarg.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10
@@ -49,6 +51,7 @@ void			*ft_memmove(void *dest, const void *src, size_t n);
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
 char			*ft_strchr(const char *s, int c);
+char			*ft_strchr2(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
 size_t			ft_strlcpy(char *dest, const char *src, size_t size);
@@ -56,7 +59,7 @@ void			*ft_calloc(size_t nmemb, size_t size);
 char			*ft_strdup(const char *s);
 char			*ft_substr(const char *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
-char			*ft_strtrim(char const *s1, char const *set);
+char			*ft_strtrim(char *s1, char const *set);
 char			*ft_itoa(int n);
 char			**ft_split(char const *s, char c);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
@@ -80,5 +83,9 @@ int				ft_print_p(intptr_t *p);
 int				ft_print_hex(unsigned int nbr, const char input);
 int				ft_print_u(unsigned int n);
 char			*get_next_line(int fd);
+void			*ft_realloc(void *ptr, size_t old_size, size_t size);
+int				ft_atoi_base(const char *str, int base);
+int				count_words(const char *str, char c);
+int				ft_strrcmp(const char *s1, const char *s2, size_t n);
 
 #endif
