@@ -1,9 +1,9 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -I libft -I minilibx-linux -g
-NAME = push_swap
+NAME = pipex
 OBJ_DIR = obj
 
-SRC_MAIN = starting.c
+SRC_MAIN = placeholder.c
 
 OBJECTS_MAIN = $(SRC_MAIN:%.c=$(OBJ_DIR)/%.o)
 OBJECTS = $(OBJECTS_MAIN)
